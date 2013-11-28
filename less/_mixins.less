@@ -51,18 +51,23 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 
+@yellow:      		#ebe16f;
+@red:         		#fbe3e4;
+@green:       		#e6efc2;
+@blue:        		#d5edf8;
+
 @alert-yellow:      #ebe16f;
 @alert-red:         #fbe3e4;
 @alert-green:       #e6efc2;
 @alert-blue:        #d5edf8;
 
-@black:             #000;
-@white:             #fff;
+@black:             #333;
+@white:             #f1f1f1;
+@grey:              #777;
 
-@bones-pink:        #f01d4f;
-@bones-blue:        #1990db;
+@strapless:         #45CBBA;
 
-@link-color:        @bones-pink;
+@link-color:        @strapless;
 @link-hover:        darken(@link-color, 9%);
 
 /*
@@ -214,49 +219,68 @@ BOX SHADOW
 BUTTONS
 *********************/
 
-.button, .button:visited {
-	border: 1px solid darken(@bones-pink, 13%);
-	border-top-color: darken(@bones-pink, 7%);
-	border-left-color: darken(@bones-pink, 7%);
-	padding: 4px 12px;
-	color: @white;
-	display: inline-block;
-	font-size: 11px;
-	font-weight: bold;
+.button(@primaryColor: @grey, @fontColor: @white){
+	border: none;
+	color: @fontColor;
 	text-decoration: none;
-	text-shadow: 0 1px rgba(0,0,0, .75);
+	text-shadow:none;
+	background: @primaryColor;
+	.border-radius(0px);
+	-webkit-transition:background .3s;
 	cursor: pointer;
-	margin-bottom: 20px;
-	line-height: 21px;
-	.transition();
-	.border-radius(4px);
-	.css-gradient(@bones-pink,darken(@bones-pink, 5%));
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	vertical-align: middle;
 
-	&:hover, &:focus {
-		color: @white;
-	  border: 1px solid darken(@bones-pink, 13%);
-	  border-top-color: darken(@bones-pink, 20%);
-	 	border-left-color: darken(@bones-pink, 20%);
-		.css-gradient(darken(@bones-pink, 5%),darken(@bones-pink, 10%));
+	&:hover {
+		background: darken(@primaryColor,10%);
+	}
+	&:active {
+		background: @primaryColor;
+	}
+
+	&:disabled {
+		background: @primaryColor;
+		opacity: 0.7;
 	}
 	
-	&:active {
-		.css-gradient(darken(@bones-pink, 5%),@bones-pink);
-	}	
 }
 
-.blue-button, .blue-button:visited {
-	border-color: darken(@bones-blue, 10%);
-	text-shadow: 0 1px 1px darken(@bones-blue, 10%);
-	.css-gradient( @bones-blue, darken(@bones-blue, 5%) );
-	-webkit-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
-       -moz-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
-   	        box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
-	&:hover, &:focus {
-		border-color: darken(@bones-blue, 15%);
-		.css-gradient( darken(@bones-blue, 4%), darken(@bones-blue, 10%) );
+.btn{
+
+	padding: 12px 20px;
+	margin:0;
+	.button();
+
+	&.btn-success {
+		.button(@green, @white);
 	}
-	&:active {
-		.css-gradient( darken(@bones-blue, 5%), @bones-blue );
+
+	&.btn-inverse {
+		.button(#333, @white);
+	}
+
+	&.btn-primary{
+		.button(@strapless, @white);
+	}	
+	&.btn-warning {
+		.button(@yellow, @white);
+	}
+
+	&.btn-danger {
+		.button(@red, @white);
+	}
+	&.btn-large {
+		font-size: 130%;
+		padding:18px 28px;
+	}
+	&.btn-small{
+		font-size: 90%;
+		padding:6px 10px;
+		margin:4px 7px;
 	}
 }

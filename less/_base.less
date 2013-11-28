@@ -12,12 +12,12 @@ and will be used across all viewports.
 ------------ MAP ------------
 
 01. GENERAL STYLES
-02. WORDPRESS BODY CLASSES
-03. LAYOUT & GRID STYLES
-04. LINK STYLES
-05. H1, H2, H3, H4, H5 STYLES
-06. HEADER STYLES
-07. NAVIGATION STYLES
+02. LAYOUT & GRID STYLES
+03. LINK STYLES
+04. H1, H2, H3, H4, H5 STYLES
+05. HEADER STYLES
+06. NAVIGATION STYLES
+07. FORM STYLES
 08. FOOTER STYLES
 
 ******************************************************************/
@@ -31,16 +31,17 @@ and will be used across all viewports.
 
 html, body {
 	/* height: 100%; */
+	background-color: @white;
 }
 body {
-	font-family: @serif;
+	font-family: @sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: #565656;
+	color: @black;
 }
 
 /*********************
-03. LAYOUT & GRID STYLES
+02. LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
@@ -50,7 +51,7 @@ body {
 #container {}
 
 /*********************
-04. LINK STYLES
+03. LINK STYLES
 *********************/
 
 a, a:visited {
@@ -78,7 +79,7 @@ a, a:visited {
 }
 
 /******************************************************************
-05. H1, H2, H3, H4, H5 STYLES
+04. H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
@@ -124,10 +125,10 @@ h5, .h5 {
 }
 
 /*********************
-06. HEADER STYLES
+05. HEADER STYLES
 *********************/
 
-.header {
+header {
 	#inner-header {}
 
 	#logo {}
@@ -144,7 +145,7 @@ h5, .h5 {
 }
 
 /*********************
-07. NAVIGATION STYLES
+06. NAVIGATION STYLES
 *********************/
 
 
@@ -205,19 +206,46 @@ menu {
 
 		}
 
-	} /* end .menu li */
+	} /* end menu li */
 
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
+} /* end menu */
 
-		a {}
+/*********************
+07. FORM STYLES
+*********************/
+input, textarea {
+	border-radius:0;
+	padding:8px;
+	border:none;
+	border-left: 4px solid @grey;
+	background: darken(@white, 5%);
+	.transition;
+	margin: 10px 0 20px 0;
 
-	}  /* end current highlighters */
+	&:focus, &:active, &:hover {
+		border-left: 4px solid @link-color;
+		outline:none;
+	}
+}
 
-} /* end .nav */
+label {
+	font-size: 1.2em;
+	margin: 10px 0 0 0;
+}
 
+button, 
+input[type=button], 
+input[type=submit], 
+input[type=reset] {
+	margin:20px 0  20px 0;
+	.btn;
+}
+
+//This increases clickability on smaller screen devices
+input, button, textarea, label, select {
+	display: block;
+	width:100%;
+}
 
 /*********************
 08. FOOTER STYLES
@@ -225,8 +253,6 @@ menu {
 
 footer {
 	clear: both;
-	#inner-footer {
-	}
 	nav {
 		li {
 			a {}
