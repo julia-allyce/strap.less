@@ -375,18 +375,18 @@ small,
 .small {
   font-size: 75%;
 }
-ul,
-ol {
-  padding: 0;
-  list-style-type: none;
-}
 dd {
   margin: 0;
 }
-.sidebar ul,
-.sidebar ol,
-.commentlist {
-  list-style: none;
+menu,
+ul,
+ol {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
 }
 /******************************************************************
 Site Name: 
@@ -543,7 +543,7 @@ BOX SHADOW
 BUTTONS
 *********************/
 .btn {
-  padding: 12px 20px;
+  padding: 12px 20px 12px 20px;
   margin: 0;
   border: none;
   color: #f1f1f1;
@@ -720,12 +720,11 @@ BUTTONS
 }
 .btn.btn-large {
   font-size: 130%;
-  padding: 18px 28px;
+  padding: 18px 28px 18px 28px;
 }
 .btn.btn-small {
   font-size: 90%;
-  padding: 6px 10px;
-  margin: 4px 7px;
+  padding: 6px 10px 6px 10px;
 }
 /*
 BASE (MOBILE) SIZE
@@ -870,8 +869,6 @@ h5,
 06. NAVIGATION STYLES
 *********************/
 menu {
-  border: 1px solid #ccc;
-  border-bottom: 0;
   /* end menu li */
 }
 menu li {
@@ -887,8 +884,13 @@ menu li a {
   display: block;
   text-decoration: none;
   padding: 10px 10px;
-  background-color: #eee;
-  border-bottom: 1px solid #ccc;
+  background-color: #45cbba;
+  color: #fff;
+  font-size: 120%;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -896,8 +898,20 @@ menu li a {
 			keep this file as small as possible!
 			*/
 }
+menu li a#logo {
+  text-transform: none;
+  font-family: "Georgia", Cambria, Times New Roman, Times, serif;
+  font-style: italic;
+}
+menu li a:hover,
+menu li a:focus {
+  color: #fff;
+  background-color: #31b1a1;
+}
 menu li ul li a {
   padding-left: 30px;
+  font-size: 100%;
+  text-transform: none;
 }
 /* end menu */
 /*********************
@@ -935,7 +949,7 @@ input[type=button],
 input[type=submit],
 input[type=reset] {
   margin: 20px 0  20px 0;
-  padding: 12px 20px;
+  padding: 12px 20px 12px 20px;
   margin: 0;
   border: none;
   color: #f1f1f1;
@@ -1184,15 +1198,14 @@ input[type=button].btn-large,
 input[type=submit].btn-large,
 input[type=reset].btn-large {
   font-size: 130%;
-  padding: 18px 28px;
+  padding: 18px 28px 18px 28px;
 }
 button.btn-small,
 input[type=button].btn-small,
 input[type=submit].btn-small,
 input[type=reset].btn-small {
   font-size: 90%;
-  padding: 6px 10px;
-  margin: 4px 7px;
+  padding: 6px 10px 6px 10px;
 }
 input,
 button,
@@ -1380,44 +1393,39 @@ LAYOUT & GRID STYLES
     max-width: 1140px;
   }
   /*********************
-HEADER STYLES
-*********************/
-  /*********************
 NAVIGATION STYLES
 *********************/
   menu {
-    background: #eee;
-    border: 0;
+    width: 100%;
+    height: 50px;
+    background: #45cbba;
     /* end menu li */
   }
   menu li {
-    float: left;
-    position: relative;
+    display: inline-block;
+    width: auto;
     /*
 		plan your menus and drop-downs wisely.
 		*/
     /* showing sub-menus */
   }
   menu li a {
-    border-bottom: 0;
+    padding: 10px 20px 10px 20px;
+    height: 50px;
     /*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
   }
-  menu li a:hover,
-  menu li a:focus {
-    background-color: #dedede;
-  }
   menu li ul {
     margin-top: 0;
-    border: 1px solid #ccc;
     border-top: 0;
     position: absolute;
     display: none;
     z-index: 8999;
   }
   menu li ul li {
+    display: block;
     /*
 				if you need to go deeper, go nuts
 				just remember deeper menus suck
@@ -1427,9 +1435,16 @@ NAVIGATION STYLES
   menu li ul li a {
     padding-left: 10px;
     border-right: 0;
-    display: block;
     width: 180px;
-    border-bottom: 1px solid #ccc;
+    height: auto;
+    clear: both;
+    background-color: #fff;
+    color: #45cbba;
+  }
+  menu li ul li a:hover,
+  menu li ul li a:focus {
+    color: #31b1a1;
+    background-color: #e6e6e6;
   }
   menu li ul li:last-child a {
     border-bottom: 0;

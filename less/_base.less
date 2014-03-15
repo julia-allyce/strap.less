@@ -150,8 +150,6 @@ header {
 
 
 menu {
-	border: 1px solid #ccc;
-	border-bottom: 0;
 
 	li {
 
@@ -159,17 +157,28 @@ menu {
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
+			background-color: @link-color;
+			color:#fff;
+			font-size: 120%;
+			height: 50px;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
 
+			&#logo {
+				text-transform: none;
+				font-family: @serif;
+				font-style: italic;
+			}
 			/*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
 			the style.scss file where it's relevant. We want to
 			keep this file as small as possible!
 			*/
-			&:hover, &:focus {
-
+			&:hover,&:focus {
+				color:#fff;
+				background-color: @link-hover;
 			}
 		}
 
@@ -190,6 +199,8 @@ menu {
 
 				a {
 					padding-left: 30px;
+					font-size: 100%;
+					text-transform: none;
 
 					&:hover,
 					&:focus {}

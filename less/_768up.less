@@ -28,35 +28,28 @@ LAYOUT & GRID STYLES
 }
 
 /*********************
-HEADER STYLES
-*********************/
-
-.header {}
-
-	#logo {}
-
-/*********************
 NAVIGATION STYLES
 *********************/
 
 menu {
-	background: #eee;
-	border: 0;
+	width:100%;
+	height: 50px;
+	background: @link-color;
+
 
 	li {
-		float: left;
-		position: relative;
+		display: inline-block;
+		width: auto;
 
 		a {
-			border-bottom: 0;
+			padding:10px 20px 10px 20px;
+			height: 50px;
 
 			/*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
-
 			}
 		}
 
@@ -68,23 +61,27 @@ menu {
 		*/
 		ul {
 			margin-top: 0;
-			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			display: none;
 			z-index: 8999;
 
 			li {
-
+				display: block;
 				a {
 					padding-left: 10px;
 					border-right: 0;
-					display: block;
 					width: 180px;
-					border-bottom: 1px solid #ccc;
+					height: auto;
+					clear:both;
+					background-color: #fff;
+					color:@link-color;
 
 					&:hover,
-					&:focus {}
+					&:focus {
+						color: @link-hover;
+						background-color: darken(#fff, 10%);
+					}
 
 					&:link {}
 				}
