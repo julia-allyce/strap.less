@@ -51,10 +51,10 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 
-@yellow:      		#ebe16f;
-@red:         		#fbe3e4;
-@green:       		#e6efc2;
-@blue:        		#d5edf8;
+@yellow:      		#C4AF28;
+@red:         		#C74B30;
+@green:       		#30B052;
+@blue:        		#3F99D8;
 
 @alert-yellow:      #ebe16f;
 @alert-red:         #fbe3e4;
@@ -252,34 +252,37 @@ BUTTONS
 
 .btn{
 
-	padding: 12px 20px 12px 20px;
+	padding: .75em 1.25em;
 	margin:0;
 	.button();
 
 	&.btn-success {
-		.button(@green, @white);
+		.button(@green, #fff);
 	}
 
 	&.btn-inverse {
-		.button(#333, @white);
+		.button(#333, #fff);
 	}
 
 	&.btn-primary{
-		.button(@strapless, @white);
-	}	
+		.button(@strapless, #fff);
+	}
+
+	&.btn-blue {
+		.button(@blue, #fff);
+	}
+
 	&.btn-warning {
-		.button(@yellow, @white);
+		.button(@yellow, #fff);
 	}
 
 	&.btn-danger {
-		.button(@red, @white);
+		.button(@red, #fff);
 	}
 	&.btn-large {
-		font-size: 130%;
-		padding:18px 28px 18px 28px;
+		font-size: 1.3em;
 	}
 	&.btn-small{
-		font-size: 90%;
-		padding:6px 10px 6px 10px;
+		font-size: .9em;
 	}
 }

@@ -543,7 +543,7 @@ BOX SHADOW
 BUTTONS
 *********************/
 .btn {
-  padding: 12px 20px 12px 20px;
+  padding: .75em 1.25em;
   margin: 0;
   border: none;
   color: #f1f1f1;
@@ -575,10 +575,10 @@ BUTTONS
 }
 .btn.btn-success {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
-  background: #e6efc2;
+  background: #30b052;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -593,18 +593,18 @@ BUTTONS
   vertical-align: middle;
 }
 .btn.btn-success:hover {
-  background: #d5e49a;
+  background: #25883f;
 }
 .btn.btn-success:active {
-  background: #e6efc2;
+  background: #30b052;
 }
 .btn.btn-success:disabled {
-  background: #e6efc2;
+  background: #30b052;
   opacity: 0.7;
 }
 .btn.btn-inverse {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
   background: #333333;
@@ -633,7 +633,7 @@ BUTTONS
 }
 .btn.btn-primary {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
   background: #45cbba;
@@ -660,12 +660,41 @@ BUTTONS
   background: #45cbba;
   opacity: 0.7;
 }
-.btn.btn-warning {
+.btn.btn-blue {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
-  background: #ebe16f;
+  background: #3f99d8;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-blue:hover {
+  background: #267fbe;
+}
+.btn.btn-blue:active {
+  background: #3f99d8;
+}
+.btn.btn-blue:disabled {
+  background: #3f99d8;
+  opacity: 0.7;
+}
+.btn.btn-warning {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #c4af28;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -680,21 +709,21 @@ BUTTONS
   vertical-align: middle;
 }
 .btn.btn-warning:hover {
-  background: #e5d842;
+  background: #9a891f;
 }
 .btn.btn-warning:active {
-  background: #ebe16f;
+  background: #c4af28;
 }
 .btn.btn-warning:disabled {
-  background: #ebe16f;
+  background: #c4af28;
   opacity: 0.7;
 }
 .btn.btn-danger {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
-  background: #fbe3e4;
+  background: #c74b30;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -709,22 +738,20 @@ BUTTONS
   vertical-align: middle;
 }
 .btn.btn-danger:hover {
-  background: #f5b6b9;
+  background: #9e3c26;
 }
 .btn.btn-danger:active {
-  background: #fbe3e4;
+  background: #c74b30;
 }
 .btn.btn-danger:disabled {
-  background: #fbe3e4;
+  background: #c74b30;
   opacity: 0.7;
 }
 .btn.btn-large {
-  font-size: 130%;
-  padding: 18px 28px 18px 28px;
+  font-size: 1.3em;
 }
 .btn.btn-small {
-  font-size: 90%;
-  padding: 6px 10px 6px 10px;
+  font-size: .9em;
 }
 @font-face {
   font-family: 'icomoon';
@@ -2133,7 +2160,6 @@ and will be used across all viewports.
 *********************/
 html,
 body {
-  /* height: 100%; */
   background-color: #f1f1f1;
 }
 body {
@@ -2141,6 +2167,9 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #333333;
+}
+mark {
+  background: none repeat scroll 0% 0% #decc5b;
 }
 /*********************
 02. LAYOUT & GRID STYLES
@@ -2236,12 +2265,11 @@ h5,
   letter-spacing: 2px;
 }
 /*********************
-05. HEADER STYLES
-*********************/
-/*********************
 06. NAVIGATION STYLES
 *********************/
 menu {
+  padding: 0;
+  margin: 0;
   /* end menu li */
 }
 menu li {
@@ -2255,6 +2283,7 @@ menu li {
 }
 menu li a {
   display: block;
+  height: 3em;
   text-decoration: none;
   padding: 10px 10px;
   background-color: #45cbba;
@@ -2271,7 +2300,6 @@ menu li a {
 }
 menu li a#logo {
   text-transform: none;
-  font-family: "Georgia", Cambria, Times New Roman, Times, serif;
   font-style: italic;
 }
 menu li a:hover,
@@ -2279,22 +2307,35 @@ menu li a:focus {
   color: #fff;
   background-color: #31b1a1;
 }
+menu li ul {
+  padding: 0;
+  margin: 0;
+}
 menu li ul li a {
-  padding-left: 30px;
-  font-size: 100%;
+  padding-left: 2em;
   text-transform: none;
 }
 /* end menu */
 /*********************
 07. FORM STYLES
 *********************/
+fieldset {
+  border: none;
+  padding: 1.5em;
+  margin: 0;
+  background: #e4e4e4;
+}
+legend {
+  font-size: 1.5em;
+  font-style: italic;
+}
 input,
 textarea {
   border-radius: 0;
   padding: 8px;
   border: none;
   border-left: 4px solid #777777;
-  background: #e4e4e4;
+  background: #fff;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -2320,7 +2361,7 @@ input[type=button],
 input[type=submit],
 input[type=reset] {
   margin: 20px 0  20px 0;
-  padding: 12px 20px 12px 20px;
+  padding: .75em 1.25em;
   margin: 0;
   border: none;
   color: #f1f1f1;
@@ -2364,10 +2405,10 @@ input[type=button].btn-success,
 input[type=submit].btn-success,
 input[type=reset].btn-success {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
-  background: #e6efc2;
+  background: #30b052;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -2385,19 +2426,19 @@ button.btn-success:hover,
 input[type=button].btn-success:hover,
 input[type=submit].btn-success:hover,
 input[type=reset].btn-success:hover {
-  background: #d5e49a;
+  background: #25883f;
 }
 button.btn-success:active,
 input[type=button].btn-success:active,
 input[type=submit].btn-success:active,
 input[type=reset].btn-success:active {
-  background: #e6efc2;
+  background: #30b052;
 }
 button.btn-success:disabled,
 input[type=button].btn-success:disabled,
 input[type=submit].btn-success:disabled,
 input[type=reset].btn-success:disabled {
-  background: #e6efc2;
+  background: #30b052;
   opacity: 0.7;
 }
 button.btn-inverse,
@@ -2405,7 +2446,7 @@ input[type=button].btn-inverse,
 input[type=submit].btn-inverse,
 input[type=reset].btn-inverse {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
   background: #333333;
@@ -2446,7 +2487,7 @@ input[type=button].btn-primary,
 input[type=submit].btn-primary,
 input[type=reset].btn-primary {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
   background: #45cbba;
@@ -2482,15 +2523,56 @@ input[type=reset].btn-primary:disabled {
   background: #45cbba;
   opacity: 0.7;
 }
+button.btn-blue,
+input[type=button].btn-blue,
+input[type=submit].btn-blue,
+input[type=reset].btn-blue {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #3f99d8;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+button.btn-blue:hover,
+input[type=button].btn-blue:hover,
+input[type=submit].btn-blue:hover,
+input[type=reset].btn-blue:hover {
+  background: #267fbe;
+}
+button.btn-blue:active,
+input[type=button].btn-blue:active,
+input[type=submit].btn-blue:active,
+input[type=reset].btn-blue:active {
+  background: #3f99d8;
+}
+button.btn-blue:disabled,
+input[type=button].btn-blue:disabled,
+input[type=submit].btn-blue:disabled,
+input[type=reset].btn-blue:disabled {
+  background: #3f99d8;
+  opacity: 0.7;
+}
 button.btn-warning,
 input[type=button].btn-warning,
 input[type=submit].btn-warning,
 input[type=reset].btn-warning {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
-  background: #ebe16f;
+  background: #c4af28;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -2508,19 +2590,19 @@ button.btn-warning:hover,
 input[type=button].btn-warning:hover,
 input[type=submit].btn-warning:hover,
 input[type=reset].btn-warning:hover {
-  background: #e5d842;
+  background: #9a891f;
 }
 button.btn-warning:active,
 input[type=button].btn-warning:active,
 input[type=submit].btn-warning:active,
 input[type=reset].btn-warning:active {
-  background: #ebe16f;
+  background: #c4af28;
 }
 button.btn-warning:disabled,
 input[type=button].btn-warning:disabled,
 input[type=submit].btn-warning:disabled,
 input[type=reset].btn-warning:disabled {
-  background: #ebe16f;
+  background: #c4af28;
   opacity: 0.7;
 }
 button.btn-danger,
@@ -2528,10 +2610,10 @@ input[type=button].btn-danger,
 input[type=submit].btn-danger,
 input[type=reset].btn-danger {
   border: none;
-  color: #f1f1f1;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: none;
-  background: #fbe3e4;
+  background: #c74b30;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -2549,34 +2631,32 @@ button.btn-danger:hover,
 input[type=button].btn-danger:hover,
 input[type=submit].btn-danger:hover,
 input[type=reset].btn-danger:hover {
-  background: #f5b6b9;
+  background: #9e3c26;
 }
 button.btn-danger:active,
 input[type=button].btn-danger:active,
 input[type=submit].btn-danger:active,
 input[type=reset].btn-danger:active {
-  background: #fbe3e4;
+  background: #c74b30;
 }
 button.btn-danger:disabled,
 input[type=button].btn-danger:disabled,
 input[type=submit].btn-danger:disabled,
 input[type=reset].btn-danger:disabled {
-  background: #fbe3e4;
+  background: #c74b30;
   opacity: 0.7;
 }
 button.btn-large,
 input[type=button].btn-large,
 input[type=submit].btn-large,
 input[type=reset].btn-large {
-  font-size: 130%;
-  padding: 18px 28px 18px 28px;
+  font-size: 1.3em;
 }
 button.btn-small,
 input[type=button].btn-small,
 input[type=submit].btn-small,
 input[type=reset].btn-small {
-  font-size: 90%;
-  padding: 6px 10px 6px 10px;
+  font-size: .9em;
 }
 input,
 button,
@@ -2616,24 +2696,11 @@ upon your base.less styles.
 
 ******************************************************************/
   /*********************
-NAVIGATION STYLES
+07. FORM STYLES
 *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  menu {
-    /* end menu ul li */
+  fieldset {
+    margin: 1.5em;
   }
-  menu li {
-    /*
-			plan your menus and drop-downs wisely.
-			*/
-  }
-  menu li a {
-    /*
-				you can use hover styles here even though this size
-				has the possibility of being a mobile device.
-				*/
-  }
-  /* end menu */
   /*********************
 FOOTER STYLES
 *********************/
@@ -2642,6 +2709,14 @@ check your menus here. do they look good?
 do they need tweaking?
 */
   /* end .footer-links */
+  input,
+  button,
+  textarea,
+  label,
+  select {
+    display: block;
+    width: auto;
+  }
 }
 /*
 TABLET & SMALLER LAPTOPS
@@ -2768,7 +2843,7 @@ NAVIGATION STYLES
 *********************/
   menu {
     width: 100%;
-    height: 50px;
+    height: 3em;
     background: #45cbba;
     /* end menu li */
   }
@@ -2781,8 +2856,7 @@ NAVIGATION STYLES
     /* showing sub-menus */
   }
   menu li a {
-    padding: 10px 20px 10px 20px;
-    height: 50px;
+    padding: .75em 1.25em;
     /*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.

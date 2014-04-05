@@ -16,45 +16,12 @@ upon your base.less styles.
 ******************************************************************/
 
 
-	
 /*********************
-NAVIGATION STYLES
+07. FORM STYLES
 *********************/
-
-	/* .menu is clearfixed inside mixins.scss */
-	menu {
-
-		li {
-			a {
-				
-				/*
-				you can use hover styles here even though this size
-				has the possibility of being a mobile device.
-				*/
-				&:hover, &:focus {
-				
-				}
-			}
-			
-			&:first-child {}
-			&:last-child {}
-			
-			/*
-			plan your menus and drop-downs wisely.
-			*/
-			ul {
-				li {
-					a {
-						&:hover,
-						&:focus {}
-						&:link {}
-					}
-					&:first-child {}
-					&:last-child {}
-				}
-			}
-		} /* end menu ul li */
-} /* end menu */
+fieldset {
+	margin:1.5em;
+}
 
 
 /*********************
@@ -70,4 +37,11 @@ footer {
 		li {}
 	}
 } /* end .footer-links */
+
+
+//This increases clickability on smaller screen devices
+input, button, textarea, label, select {
+	display: block;
+	width:auto;
+}
 			

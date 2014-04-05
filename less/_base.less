@@ -30,7 +30,6 @@ and will be used across all viewports.
 *********************/
 
 html, body {
-	/* height: 100%; */
 	background-color: @white;
 }
 body {
@@ -38,6 +37,10 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: @black;
+}
+
+mark {
+    background: none repeat scroll 0% 0% lighten(@yellow, 15%);
 }
 
 /*********************
@@ -124,25 +127,6 @@ h5, .h5 {
 	letter-spacing: 2px;
 }
 
-/*********************
-05. HEADER STYLES
-*********************/
-
-header {
-	#inner-header {}
-
-	#logo {}
-	
-	menu {
-		li {	
-			a {}
-
-			&:first-child {}
-
-			&:last-child {}
-		}
-	}
-}
 
 /*********************
 06. NAVIGATION STYLES
@@ -150,11 +134,14 @@ header {
 
 
 menu {
+	padding: 0;
+	margin:0;
 
 	li {
 
 		a {
 			display: block;
+			height: 3em;
 			text-decoration: none;
 			padding: 10px 10px;
 			background-color: @link-color;
@@ -165,7 +152,6 @@ menu {
 
 			&#logo {
 				text-transform: none;
-				font-family: @serif;
 				font-style: italic;
 			}
 			/*
@@ -192,12 +178,13 @@ menu {
 		http://www.alistapart.com/articles/organizing-mobile/
 		*/
 		ul {
+			padding: 0;
+			margin:0;
 
 			li {
 
 				a {
-					padding-left: 30px;
-					font-size: 100%;
+					padding-left: 2em;
 					text-transform: none;
 
 					&:hover,
@@ -222,12 +209,24 @@ menu {
 /*********************
 07. FORM STYLES
 *********************/
+fieldset {
+	border:none;
+	padding:1.5em;
+	margin:0;
+	background: darken(@white, 5%);
+}
+
+legend {
+	font-size: 1.5em;
+	font-style: italic;
+}
+
 input, textarea {
 	border-radius:0;
 	padding:8px;
 	border:none;
 	border-left: 4px solid @grey;
-	background: darken(@white, 5%);
+	background:#fff;
 	.transition;
 	margin: 10px 0 20px 0;
 
