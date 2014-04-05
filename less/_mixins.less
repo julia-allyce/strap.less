@@ -250,39 +250,18 @@ BUTTONS
 	
 }
 
-.btn{
 
-	padding: .75em 1.25em;
-	margin:0;
-	.button();
+.make-icon(@content; @font: 'icomoon') {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
 
-	&.btn-success {
-		.button(@green, #fff);
-	}
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-	&.btn-inverse {
-		.button(#333, #fff);
-	}
-
-	&.btn-primary{
-		.button(@strapless, #fff);
-	}
-
-	&.btn-blue {
-		.button(@blue, #fff);
-	}
-
-	&.btn-warning {
-		.button(@yellow, #fff);
-	}
-
-	&.btn-danger {
-		.button(@red, #fff);
-	}
-	&.btn-large {
-		font-size: 1.3em;
-	}
-	&.btn-small{
-		font-size: .9em;
-	}
+	content: @content;
 }

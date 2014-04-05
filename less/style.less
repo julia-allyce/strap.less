@@ -31,34 +31,38 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 */
 
 // styles in base.less
+
 @import "_base.less";
+
+@import "_strap.less";
 
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
+~481px+
 */
 @media only screen and (min-width: 28.75em) {
 
-	// styles in 481up.less
-	@import "_481up.less";
+	@import "_28up.less";
 
-} // end of media query
+} 
 
 /*
 TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
+~768px+
 */
 @media only screen and (min-width: 40.5em) {
 
 	// import grid
 	@import "_grid.less";
 
-	// styles in 768up.less
-	@import "_768up.less";
+	// styles in 40up.less
+	@import "_40up.less";
 
 } // end of media query
 
@@ -67,22 +71,24 @@ DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
+~1030px+
 */
 @media only screen and (min-width: 64.375em) {
 
-	// styles in 1030up.less
-	@import "_1030up.less";
+	// styles in 64up.less
+	@import "_64up.less";
 
 } // end of media query
 
 /*
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
+~1240px+
 */
 @media only screen and (min-width: 77.5em) {
 
-	// styles in 1240up.less
-	@import "_1240up.less";
+	// styles in 77up.less
+	@import "_77up.less";
 
 } // end of media query
 
@@ -101,15 +107,6 @@ query for retina AND a certain size if you want. Go Nuts.
 
 } // end of media query
 
-/*
-iPHONE 5 MEDIA QUERY
-Want to get fancy for no good reason? Knock yourself out.
-*/
-@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-
-  // iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
-
-}
 
 /*
 PRINT STYLESHEET

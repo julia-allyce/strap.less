@@ -542,217 +542,6 @@ BOX SHADOW
 /*********************
 BUTTONS
 *********************/
-.btn {
-  padding: .75em 1.25em;
-  margin: 0;
-  border: none;
-  color: #f1f1f1;
-  text-decoration: none;
-  text-shadow: none;
-  background: #777777;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-transition: background .3s;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  outline: none;
-  position: relative;
-  vertical-align: middle;
-}
-.btn:hover {
-  background: #5e5e5e;
-}
-.btn:active {
-  background: #777777;
-}
-.btn:disabled {
-  background: #777777;
-  opacity: 0.7;
-}
-.btn.btn-success {
-  border: none;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: none;
-  background: #30b052;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-transition: background .3s;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  outline: none;
-  position: relative;
-  vertical-align: middle;
-}
-.btn.btn-success:hover {
-  background: #25883f;
-}
-.btn.btn-success:active {
-  background: #30b052;
-}
-.btn.btn-success:disabled {
-  background: #30b052;
-  opacity: 0.7;
-}
-.btn.btn-inverse {
-  border: none;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: none;
-  background: #333333;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-transition: background .3s;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  outline: none;
-  position: relative;
-  vertical-align: middle;
-}
-.btn.btn-inverse:hover {
-  background: #1a1a1a;
-}
-.btn.btn-inverse:active {
-  background: #333333;
-}
-.btn.btn-inverse:disabled {
-  background: #333333;
-  opacity: 0.7;
-}
-.btn.btn-primary {
-  border: none;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: none;
-  background: #45cbba;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-transition: background .3s;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  outline: none;
-  position: relative;
-  vertical-align: middle;
-}
-.btn.btn-primary:hover {
-  background: #30ad9d;
-}
-.btn.btn-primary:active {
-  background: #45cbba;
-}
-.btn.btn-primary:disabled {
-  background: #45cbba;
-  opacity: 0.7;
-}
-.btn.btn-blue {
-  border: none;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: none;
-  background: #3f99d8;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-transition: background .3s;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  outline: none;
-  position: relative;
-  vertical-align: middle;
-}
-.btn.btn-blue:hover {
-  background: #267fbe;
-}
-.btn.btn-blue:active {
-  background: #3f99d8;
-}
-.btn.btn-blue:disabled {
-  background: #3f99d8;
-  opacity: 0.7;
-}
-.btn.btn-warning {
-  border: none;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: none;
-  background: #c4af28;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-transition: background .3s;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  outline: none;
-  position: relative;
-  vertical-align: middle;
-}
-.btn.btn-warning:hover {
-  background: #9a891f;
-}
-.btn.btn-warning:active {
-  background: #c4af28;
-}
-.btn.btn-warning:disabled {
-  background: #c4af28;
-  opacity: 0.7;
-}
-.btn.btn-danger {
-  border: none;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: none;
-  background: #c74b30;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-transition: background .3s;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  outline: none;
-  position: relative;
-  vertical-align: middle;
-}
-.btn.btn-danger:hover {
-  background: #9e3c26;
-}
-.btn.btn-danger:active {
-  background: #c74b30;
-}
-.btn.btn-danger:disabled {
-  background: #c74b30;
-  opacity: 0.7;
-}
-.btn.btn-large {
-  font-size: 1.3em;
-}
-.btn.btn-small {
-  font-size: .9em;
-}
 @font-face {
   font-family: 'icomoon';
   src: url('fonts/icomoon.eot?-mylk4q');
@@ -768,7 +557,6 @@ BUTTONS
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2171,12 +1959,8 @@ body {
 mark {
   background: none repeat scroll 0% 0% #decc5b;
 }
-/*********************
-02. LAYOUT & GRID STYLES
-*********************/
-.wrap {
-  width: 96%;
-  margin: 0 auto;
+table {
+  width: 100%;
 }
 /*********************
 03. LINK STYLES
@@ -2664,7 +2448,7 @@ textarea,
 label,
 select {
   display: block;
-  width: 100%;
+  min-width: 80%;
 }
 /*********************
 08. FOOTER STYLES
@@ -2672,11 +2456,316 @@ select {
 footer {
   clear: both;
 }
+.strapless-radio input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+.strapless-radio input[type=radio]:checked + label:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e73b";
+}
+.strapless-radio label:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e73c";
+  padding-right: 0.5em;
+  vertical-align: bottom;
+}
+.strapless-checkbox input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+.strapless-checkbox input[type=checkbox]:checked + label:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e738";
+}
+.strapless-checkbox label:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e739";
+  padding-right: 0.5em;
+  vertical-align: bottom;
+}
+table.strapless-table {
+  border: 1px solid #cbcbcb;
+  background: #f1f1f1;
+}
+table.strapless-table caption {
+  font-size: 1.5em;
+  font-style: italic;
+}
+table.strapless-table th,
+table.strapless-table td {
+  padding: 0.25em;
+}
+table.strapless-table thead {
+  text-align: left;
+  border-bottom: 1px solid #cbcbcb;
+}
+table.strapless-table tfoot {
+  text-align: left;
+  border-top: 1px solid #cbcbcb;
+}
+table.strapless-table tbody tr {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+table.strapless-table tbody tr:nth-child(even) {
+  background: #fff;
+}
+table.strapless-table tbody tr:hover {
+  background: #95e1d8;
+}
+.btn {
+  padding: .75em 1.25em;
+  margin: 0;
+  border: none;
+  color: #f1f1f1;
+  text-decoration: none;
+  text-shadow: none;
+  background: #777777;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn:hover {
+  background: #5e5e5e;
+}
+.btn:active {
+  background: #777777;
+}
+.btn:disabled {
+  background: #777777;
+  opacity: 0.7;
+}
+.btn.btn-success {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #30b052;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-success:hover {
+  background: #25883f;
+}
+.btn.btn-success:active {
+  background: #30b052;
+}
+.btn.btn-success:disabled {
+  background: #30b052;
+  opacity: 0.7;
+}
+.btn.btn-inverse {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #333333;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-inverse:hover {
+  background: #1a1a1a;
+}
+.btn.btn-inverse:active {
+  background: #333333;
+}
+.btn.btn-inverse:disabled {
+  background: #333333;
+  opacity: 0.7;
+}
+.btn.btn-primary {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #45cbba;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-primary:hover {
+  background: #30ad9d;
+}
+.btn.btn-primary:active {
+  background: #45cbba;
+}
+.btn.btn-primary:disabled {
+  background: #45cbba;
+  opacity: 0.7;
+}
+.btn.btn-blue {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #3f99d8;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-blue:hover {
+  background: #267fbe;
+}
+.btn.btn-blue:active {
+  background: #3f99d8;
+}
+.btn.btn-blue:disabled {
+  background: #3f99d8;
+  opacity: 0.7;
+}
+.btn.btn-warning {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #c4af28;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-warning:hover {
+  background: #9a891f;
+}
+.btn.btn-warning:active {
+  background: #c4af28;
+}
+.btn.btn-warning:disabled {
+  background: #c4af28;
+  opacity: 0.7;
+}
+.btn.btn-danger {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #c74b30;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-danger:hover {
+  background: #9e3c26;
+}
+.btn.btn-danger:active {
+  background: #c74b30;
+}
+.btn.btn-danger:disabled {
+  background: #c74b30;
+  opacity: 0.7;
+}
+.btn.btn-large {
+  font-size: 1.3em;
+}
+.btn.btn-small {
+  font-size: .9em;
+}
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
+~481px+
 */
 @media only screen and (min-width: 28.75em) {
   /******************************************************************
@@ -2723,6 +2812,7 @@ TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
+~768px+
 */
 @media only screen and (min-width: 40.5em) {
   /******************************************************************
@@ -2921,6 +3011,7 @@ DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
+~1030px+
 */
 @media only screen and (min-width: 64.375em) {
   /******************************************************************
@@ -2937,6 +3028,7 @@ be seen on the Desktop.
 /*
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
+~1240px+
 */
 @media only screen and (min-width: 77.5em) {
   /******************************************************************
@@ -2998,10 +3090,6 @@ the original dimensions and you are good to go.
 
 */
 }
-/*
-iPHONE 5 MEDIA QUERY
-Want to get fancy for no good reason? Knock yourself out.
-*/
 /*
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
